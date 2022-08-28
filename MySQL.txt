@@ -1,0 +1,39 @@
+MySQL
+-----
+
+1.) List all databases present on your machine
+-----------------------------------------------
+
+SHOW DATABASES;
+
+2.) Create a New database
+-------------------------
+
+CREATE DATABASE suman;
+
+3.) Use a Database
+------------------
+
+USE <database_name>;
+
+4.) DISPLAY A Table
+-------------------
+
+SELECT * FROM <table_name>;
+
+
+5.) DELETE Databases;
+---------------------
+
+ DROP DATABASE <db_name>;
+
+
+6.) CREATE Table
+----------------
+
+CREATE TABLE guvi(id INT, name VARCHAR(20), mobile INT, location VARCHAR(20));
+
+7.) DESCRIBE A TABLE
+--------------------
+
+DESCRIBE guvi;
