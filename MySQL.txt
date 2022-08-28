@@ -37,3 +37,23 @@ CREATE TABLE guvi(id INT, name VARCHAR(20), mobile INT, location VARCHAR(20));
 --------------------
 
 DESCRIBE guvi;
+
+8.) INSERT Single Data into a Table
+-----------------------------------
+
+INSERT INTO guvi(id,name,mobile,location) VALUES(1,'suman',12345,'bangalore');
+
+9.) INSERT Multiple Datas into a Table
+--------------------------------------
+
+INSERT INTO guvi(id,name,mobile,location) VALUES(2,'ravi',54321,'lucknow'), (3,'tanu',89654,'hyderabad');
+
+10.) Update Data
+----------------
+
+UPDATE guvi SET location='patna' WHERE id=1;
+
+11.) Delete data
+----------------
+
+DELETE FROM guvi WHERE id=1;
