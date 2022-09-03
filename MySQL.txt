@@ -116,5 +116,29 @@ It will fetch us all records from the both tables.
 
 SELECT customers.ContactName, customers.City, customers.Country, orders.ShipCity FROM orders CROSS JOIN customers;
 
+21.) UNION 
+----------
+
+SELECT customers.ContactName FROM customers UNION SELECT products.ProductName FROM products;
+
+SELECT city FROM customers UNION SELECT city FROM suppliers;
+
+22.) GROUP BY
+-------------
+
+SELECT COUNT(CustomerID), city FROM customers GROUP BY city ORDER BY COUNT(city) DESC;
+
+SELECT COUNT(CustomerID), Country FROM customers GROUP BY Country ORDER BY COUNT(country) DESC;
+
+SELECT COUNT(CustomerID), Country FROM customers GROUP BY Country;
+
+23.) INSERT into SELECT 
+-----------------------
+
+CREATE TABLE inser_into_select(name VARCHAR(40), address VARCHAR(60), city VARCHAR(15), country VARCHAR(15));
+
+INSERT INTO inser_into_select(name,address,city,country) SELECT ContactName,Address,City,Country FROM customers;
+
+NOTE # It copies data from one table to another using the SELECT statement and using the INSERT command.
 
 
