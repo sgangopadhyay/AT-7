@@ -139,6 +139,8 @@ CREATE TABLE inser_into_select(name VARCHAR(40), address VARCHAR(60), city VARCH
 
 INSERT INTO inser_into_select(name,address,city,country) SELECT ContactName,Address,City,Country FROM customers;
 
+INSERT INTO inser_into_select(name,address,city,country) SELECT ContactName,Address,City,Country FROM customers WHERE country='UK' OR country='Brazil';
+
 NOTE # It copies data from one table to another using the SELECT statement and using the INSERT command.
 
 
