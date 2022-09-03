@@ -72,3 +72,49 @@ ALTER TABLE student ADD email_id VARCHAR(20);
 -------------------------------------------
 
 ALTER TABLE student DROP COLUMN location;
+
+15.) IMPORT SQL DB into your local MySQL Database
+--------------------------------------------------
+
+mysql -u root -p db_name < backup.sql 
+
+16.) JOINS
+----------
+
+Joins is used to get table from two tables.
+
+1.) Inner Join 
+2.) Left Join 
+3.) Right Join 
+4.) Cross Join 
+
+17.) INNER JOINS
+----------------
+
+It is used to get data which is present on both the tables;
+
+SELECT orders.orderid, customers.contactname, customers.city FROM orders INNER JOIN customers ON orders.customerid=customers.customerid;
+
+18.) LEFT JOIN
+---------------
+
+It gives us data from the LEFT TABLE and the common data that is present in both the tables;
+
+SELECT orders.orderid, orders.shipname, customers.customerid, customers.contactname FROM orders LEFT JOIN customers ON customers.customerid=orders.customerid;
+
+19.) RIGHT JOIN
+---------------
+
+It gives us data from the RIGHT TABLE and the common data that is present in both the tables.
+
+SELECT orders.orderid, orders.shipname, customers.customerid, customers.contactname FROM orders RIGHT JOIN customers ON customers.customerid=orders.customerid;
+
+20.) CROSS JOIN
+----------------
+
+It will fetch us all records from the both tables.
+
+SELECT customers.ContactName, customers.City, customers.Country, orders.ShipCity FROM orders CROSS JOIN customers;
+
+
+
